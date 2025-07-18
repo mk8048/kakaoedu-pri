@@ -1,6 +1,9 @@
 # 사전 환경 구성
 사전 환경 구성에 대한 실습입니다.
 
+- Day1 구성 아키텍처
+<img width="938" height="544" alt="day1 아키텍쳐" src="https://github.com/user-attachments/assets/c3ba2fa4-edf4-4836-9856-de699f79c2d0" />
+
 ## 1. VPC 생성
 1. 카카오 클라우드 콘솔 > Beyond Networking Service > VPC
 2. VPC 생성 버튼 클릭  
@@ -171,10 +174,8 @@
    - **Note**: pub/sub 토큰 생성 API 호출 시 `조직 id`와 `프로젝트 id`를 경로 변수로 사용
    - {endpoint-url}/v1/domains/`{조직 id}`/projects/`{프로젝트 id}`/topics/{topic-name}
    - `사용자 UUID` 는 이후 s3 sink connector 생성 시 필요
-     
-  ![Image](https://github.com/user-attachments/assets/5fadd88d-d512-45a8-9ccb-23d42fdd94c0)
 
-
+   <img width="1501" height="526" alt="계정 정보 모자이크" src="https://github.com/user-attachments/assets/3a8ef09e-185f-48a5-bdfe-a0069f48b2b6" />
 
 ## 8. Traffic Generator VM 생성 (7분)
 1. 카카오 클라우드 콘솔 > Beyond Compute Service > Virtual Machine
@@ -360,6 +361,9 @@
       # 데이터베이스 설정
       export MYSQL_HOST="{MySQL 엔드포인트}"
       
+      # 스키마 레지스트리 설정
+      export SCHEMA_REGISTRY_URL="{Schema Registry의 Public IP}"
+      
       # Pub/Sub 및 Kafka 설정
       export LOGSTASH_KAFKA_ENDPOINT="{Kafka 부트스트랩 서버}"
       export PUBSUB_TOPIC_NAME="log-topic"
@@ -453,7 +457,7 @@
    sudo -E /home/ubuntu/setup_db.sh
    ```
 
-   ![setup db](https://github.com/user-attachments/assets/93915046-1e34-4874-a460-db76feafa0da)
+   <img width="1219" height="189" alt="setupdb 결과" src="https://github.com/user-attachments/assets/3ee69e38-5dd3-4066-9cc3-863768e93022" />
    
 ## 10. 로드 밸런서 대상 그룹 생성 (15분)
 1. 카카오 클라우드 콘솔 > Beyond Networking Service > Load Balancing
