@@ -2,8 +2,8 @@
 Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. VPC,  사용자 액세스 키 등을 생성합니다.
 
 ## 1. Kubernetes Engine Cluster 생성 (약 10~15분 소요)
-1. 카카오 클라우드 콘솔 > Container Pack > Kubernetes > Cluster
-2. Cluster 서비스 `시작하기` 버튼 클릭
+1. 카카오 클라우드 콘솔 > Container Pack > Kubernetes Engine > 클러스터
+2. 클러스터 서비스 `시작하기` 버튼 클릭
 3. `클러스터 만들기` 클릭
 4. 클러스터 기본 설정 정보 작성
     - 기본 설정
