@@ -18,7 +18,7 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
        - `Calico` 선택
        - 서비스 IP CIDR 블록(선택): 빈칸
        - 파드 IP CIDR 블록(선택): 빈칸
-   - `만들기` 버튼 클릭
+   - `생성` 버튼 클릭
 5. 클러스터 생성 상태 확인 
 
 ## 2. Kubernetes Engine Cluster의 노드풀 생성
@@ -26,12 +26,12 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
 2. 생성된 k8s-cluster 세부 정보 확인
 
 #### pool-ingress 노드풀 생성 (약 3분 소요)
-3. 노드 풀 탭 > `노드 풀 만들기` 클릭
+3. 노드 풀 탭 > `노드 풀 생성` 클릭
 4. pool-ingress 노드 풀 설정 정보
     - 노드 풀 타입: `Virtual Machine`
     - 기본 설정
         - 노드 풀 이름: `pool-ingress`
-        - 노드 풀 설명(선택): 빈칸
+        - 노드 풀 설명(선택): `빈 칸`
     - Image: `Ubuntu 22.04`
     - Instance 타입: `m2a.large`
     - Volume: SSD `50GB`
@@ -41,16 +41,16 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
         - Subnet: `Public 서브넷 2개` 선택
     - 보안 그룹
     - Key Pair: `keypair`
-    - 고급 설정(선택): 빈칸
-    - `만들기` 버튼 클릭
+    - 고급 설정(선택): `빈 칸`
+    - `생성` 버튼 클릭
 
 #### pool-worker 노드풀 생성 (약 3분 소요) 
-5. 노드 풀 탭 > 노드 풀 만들기 클릭
+5. 노드 풀 탭 > 노드 풀 생성 클릭
 6. pool-worker 노드 설정 정보
     - 노드 풀 타입: `Virtual Machine`
     - 기본 설정
         - 노드 풀 이름: `pool-worker`
-        - 노드 풀 설명(선택): 빈칸
+        - 노드 풀 설명(선택): `빈 칸`
     - Image: `Ubuntu 22.04`
     - Instance 타입: `m2a.xlarge`
     - Volume: SSD `100GB`
@@ -60,11 +60,11 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
         - Subnet: `Public 서브넷 2개` 선택
     - 보안 그룹
     - Key Pair: `keypair`
-    - 고급 설정(선택): 빈칸
-    - `만들기` 버튼 클릭
+    - 고급 설정(선택): `빈 칸`
+    - `생성` 버튼 클릭
 
 #### pool-gpu 노드풀 생성 (약 3분 소요)
-7. 노드 풀 탭 > 노드 풀 만들기 클릭
+7. 노드 풀 탭 > 노드 풀 생성성 클릭
 8. pool-worker 노드 설정 정보
     - 노드 풀 타입: `GPU`
     - 기본 설정
@@ -79,8 +79,8 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
         - Subnet: `Public 서브넷 2개` 선택
     - 보안 그룹
     - Key Pair: `keypair`
-    - 고급 설정(선택): 빈칸
-    - `만들기` 버튼 클릭
+    - 고급 설정(선택): `빈 칸`
+    - `생성` 버튼 클릭
 9. 노드 풀 탭에서 생성된 노드 풀 목록 확인
     - pool-ingress, pool-worker, pool-gpu 생성 확인
 10. 노드 탭 클릭 후 노드 8개 생성 확인
@@ -96,7 +96,7 @@ Kubeflow 실습을 위한 프로젝트 기본 환경 실습을 진행합니다. 
     - 유형: `Basic`
     - 크기: `1TB`
     - 네트워크 설정
-        - VPC : `vpc_k8s`
+        - VPC : `kc-vpc`
         - 서브넷 : `main`
     - 접근 제어 설정: `설정된 VPC와 통신이 가능한 모든 프라이빗 IP 주소를 허용합니다.` 선택
     - 마운트 정보 설정 : `handson`
