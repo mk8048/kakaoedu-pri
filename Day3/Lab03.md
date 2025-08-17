@@ -2,7 +2,7 @@
 
 
 
-## 2. 생성된 Notebook에 접속하여 namespace 내의 리소스들 확인
+## 1. Joined 테이블 생성
 1. Notebooks 탭 > `cpu-notebook`의 `CONNECT` 클릭
 2. Other 중 `Terminal` 클릭
 3. kubectl.ipynb 파일 다운로드
@@ -12,7 +12,7 @@
    ```
    - kubectl.ipynb 파일 생성 확인 및 더블 클릭 후 내부 코드 실행
 
-## 3. 간단한 Notebook 실습
+## 2. 성별 예측 실습
 1. speed.ipynb 파일 다운로드
    - **Note**: 위에서 생성한 Notebook(`cpu-notebook`)에서 입력
 
