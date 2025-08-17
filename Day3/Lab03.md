@@ -1,32 +1,5 @@
-# K8s의 내부 동작 확인
+# 성별 예측
 
-쿠버네티스 위에서 동작하는 Kubeflow의 리소스들이 어떤 것들이 있는지 확인해 보는 실습입니다.
-
-## 1. CPU 기반 Notebook 생성 (약 3분 소요)
-
-- **Note** : Kubeflow 콘솔에서 진행하는 실습입니다.
-1. kbm-u-kubeflow-tutorial 네임스페이스 선택 > 좌측 메뉴바의 `Notebooks` 탭 클릭
-2. `+ New Notebook` 클릭
-    - 노트북 설정 정보
-        - Name
-            - Name : `cpu-notebook`
-        - Docker Image
-            - `Custom Notebook` 클릭
-                - Image : `kc-kubeflow-registry/jupyter-tensorflow-cuda-full:v1.8.0.py311.1a`
-                - **Note**: 이미지 이름 정확하게 확인하기
-        - CPU/RAM
-            - Minimum CPU : `2`
-            - Minimum memory  Gi : `8`
-        - GPUs
-            - Number of GPUs : `None`
-        - Workspace Valume, Data Valumes : `모두 기본값 사용`
-        - `Advanced Options` 클릭
-            - Configurations : `기본값 사용`
-            - Affinity Config : `pool-worker`
-            - Tolerations Group : `None`
-            - Miscellaneous Settings : `Enable Shared Memory`
-    - `LAUNCH` 클릭
-3. Notebook 생성 확인
 
 
 ## 2. 생성된 Notebook에 접속하여 namespace 내의 리소스들 확인
